@@ -1,8 +1,0 @@
-POST http://localhost:4000/users HTTP/1.1
-content-type: application/json
-
-{
-    "nom":"FATIZA",
-    "email":"FATIZA@GMAIL.COM",
-    "password":"fatizapass"
-}

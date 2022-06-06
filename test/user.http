@@ -1,0 +1,27 @@
+@hostname = http://localhost:4000/
+###
+
+GET {{hostname}}users HTTP/1.1
+content-type: application/json
+
+###
+
+GET {{hostname}}users/e703b0fb-acad-465f-b93d-2f1bb0737acc HTTP/1.1
+content-type: application/json
+
+###
+
+DELETE {{hostname}}users/e703b0fb-acad-465f-b93d-2f1bb0737acc HTTP/1.1
+content-type: application/json
+
+###
+
+POST {{hostname}}users HTTP/1.1
+content-type: application/json
+
+{
+    "id":"e703b0fb-acad-465f-b93d-2f1bb0737acc",
+    "nom":"FATIZA",
+    "email":"FATIZA@GMAIL.COM",
+    "password":"fatizapass"
+}
