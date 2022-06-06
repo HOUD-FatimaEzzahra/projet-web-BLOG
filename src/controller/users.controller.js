@@ -10,9 +10,11 @@ class UserController {
         password,
       },
     });
+    console.log(user);
     if (!user) res.json({ message: "password or email incorrect" });
     res.json({ user });
   }
+
   async createUser(req, res) {
     const { nom, email, password } = req.body;
 
