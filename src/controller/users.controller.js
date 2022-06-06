@@ -3,15 +3,18 @@ const { client } = require("./client");
 
 class UserController {
   async login(req, res) {
+    const { email, password } = req.body;
     const user = await client.utilisateur.findFirst({
       where: {
         email,
+        password,
       },
     });
-    return {
-      user,
-    };
+    console.log(user);
+    if (!user) res.json({ message: "password or email incorrect" });
+    res.json({ user });
   }
+
   async createUser(req, res) {
     const { nom, email, password } = req.body;
 
